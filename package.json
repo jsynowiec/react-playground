@@ -2,10 +2,19 @@
   "name": "react-playground",
   "version": "0.0.0",
   "description": "Some fun with React",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack -p --progress",
+    "start": "webpack-dev-server --inline --hot"
+  },
   "author": "",
   "license": "",
   "devDependencies": {
-    "eslint": "^1.9.0"
+    "babel": "^6.1.18",
+    "babel-core": "^6.1.21",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.18",
+    "eslint": "^1.9.0",
+    "webpack": "^1.12.6",
+    "webpack-dev-server": "^1.12.1"
   }
 }
