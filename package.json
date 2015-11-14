@@ -1,0 +1,11 @@
+{
+  "name": "react-playground",
+  "version": "0.0.0",
+  "description": "Some fun with React",
+  "scripts": {},
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "eslint": "^1.9.0"
+  }
+}
