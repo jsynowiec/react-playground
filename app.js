@@ -1,6 +1,6 @@
 // app.js
 
-require('./../styles/app.sass');
+require('./app.less');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
