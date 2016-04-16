@@ -6,8 +6,9 @@
     "build": "webpack -p --progress",
     "start": "webpack-dev-server --inline --hot"
   },
-  "author": "",
-  "license": "",
+  "author": "Jakub Synowiec",
+  "repository": "https://github.com/jsynowiec/react-playground",
+  "license": "MIT",
   "devDependencies": {
     "babel": "~6.5.2",
     "babel-core": "~6.7.6",
