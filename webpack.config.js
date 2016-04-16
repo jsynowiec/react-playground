@@ -1,13 +1,11 @@
-// webpack.config.js
-
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './scripts/app.js',
+  entry: './app.js',
   output: {
     path: 'build',
     publicPath: '/build/',
-    filename: 'main.js'
+    filename: 'main.js',
   },
   module: {
     loaders: [
@@ -16,21 +14,21 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
-        }
+          presets: ['es2015', 'react'],
+        },
       },
       {
-        test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('css!sass')
-      }
-    ]
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract('css!less'),
+      },
+    ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
   },
   plugins: [
     new ExtractTextPlugin('styles.css', {
-      allChunks: true
-    })
-  ]
+      allChunks: true,
+    }),
+  ],
 };
