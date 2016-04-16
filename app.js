@@ -5,7 +5,9 @@ require('./app.less');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import CommentBox from './src/CommentBox';
+
 ReactDOM.render(
-  <h1>Hello</h1>,
+  React.createElement(CommentBox, null),
   document.getElementById('main')
 );
