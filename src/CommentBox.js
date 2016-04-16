@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
-export default function CommentBox() {
+const propTypes = {
+  data: PropTypes.array.isRequired,
+};
+
+function CommentBox({ data }) {
   return (
     <div className="commentBox">
       <h1>Comments</h1>
-      <CommentList />
+      <CommentList data={data} />
       <CommentForm />
     </div>
   );
 }
+
+CommentBox.propTypes = propTypes;
+
+export default CommentBox;

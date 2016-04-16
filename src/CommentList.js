@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Comment from './Comment';
 
-export default function CommentList() {
+const propTypes = {
+  data: PropTypes.array.isRequired,
+};
+
+function CommentList({ data }) {
+  const commentNodes = data.map(
+    (comment) => (
+      <Comment author={comment.author} key={comment.id}>
+        {comment.text}
+      </Comment>
+    )
+  );
+
   return (
     <div className="commentList">
-      <Comment author="Pete Hunt">This is one comment</Comment>
-      <Comment author="Jordan Walke">This is *another* comment</Comment>
+      {commentNodes}
     </div>
   );
 }
+
+CommentList.propTypes = propTypes;
+
+export default CommentList;
