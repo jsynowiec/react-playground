@@ -3,9 +3,9 @@
 require('./app.less');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-ReactDOM.render(
+render(
   <h1>Hello</h1>,
   document.getElementById('main')
 );
