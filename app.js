@@ -3,7 +3,7 @@
 require('./app.less');
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
 import CommentBox from './src/CommentBox';
 
@@ -12,7 +12,7 @@ const data = [
   { id: 2, author: 'Jordan Walke', text: 'This is *another* comment' },
 ];
 
-ReactDOM.render(
+render(
   <CommentBox data={data} />,
   document.getElementById('main')
 );
